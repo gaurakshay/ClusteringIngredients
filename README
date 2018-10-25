@@ -1,0 +1,22 @@
+Here are the steps that I followed to predict the meals:
+    1. Get the user input.
+    2. Use vectorizer to convert it to a vector.
+    3. Use KMeans.predictor to find the closest cluster for the input http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html#sklearn.cluster.KMeans.predict
+    4. After getting the cluster, get the dishes from that cluster.
+
+
+PROGRAM LOGIC:
+
+1. Vectorize the srep00196-s2.csv data.
+2. Ask the user if they want to plot the clusters. User can enter "y" to show the plot or "n" to skip this step.
+3. Ask the user if they want to search.
+    3.a If the it is the first time, we create the KMeans clustering. If the user has give the number of clusters in step 2, then proceed. Otherwise, the number of clusters is assumed to be 6.
+    3.b If it is not the first time, KMeans clustering is not done again.
+4. If the user selects the option to search, ask for the user input in CSV format.
+5. Take this input and use the vectorizer from step 1 to vectorize the user input.
+6. Use KMeans.predict to find the closest cluster.
+7. Use the obtained cluster to find the meals in that cluster.
+
+
+TO RUN THE PROGRAM, SIMPLY GIVE THE COMMAND "python cluster.py" IN YOUR TERMINAL.
+Please make sure that the srep00196-s2.csv and the python program are in the same directory.
